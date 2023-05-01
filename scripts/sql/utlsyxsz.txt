@@ -1,0 +1,110 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SYSAUX Size Estimation Report
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Estimated at
+15:08:41 on Jan 01, 2022 ( Saturday ) in Timezone +01:00
+
+
+~~~~~~~~~~~~~~~~~~~~
+Current SYSAUX usage
+~~~~~~~~~~~~~~~~~~~~
+| Total SYSAUX size:                       9,320.1 MB
+|
+| Total size of SM/OPTSTAT                   415.4 MB (   4.5% of SYSAUX )
+| Total size of JOB_SCHEDULER              7,029.9 MB (  75.4% of SYSAUX )
+| Total size of SM/OTHER                     102.8 MB (   1.1% of SYSAUX )
+| Total size of SDO                           89.8 MB (   1.0% of SYSAUX )
+| Total size of XDB                           60.8 MB (   0.7% of SYSAUX )
+| Total size of AO                            45.7 MB (   0.5% of SYSAUX )
+| Total size of ORDIM/ORDDATA                 16.3 MB (   0.2% of SYSAUX )
+| Total size of SM/ADVISOR                    11.7 MB (   0.1% of SYSAUX )
+| Total size of SMON_SCN_TIME                  8.5 MB (   0.1% of SYSAUX )
+| Total size of PL/SCOPE                       8.1 MB (   0.1% of SYSAUX )
+| Total size of AUDSYS                         7.9 MB (   0.1% of SYSAUX )
+| Total size of WM                             6.6 MB (   0.1% of SYSAUX )
+| Total size of TEXT                           2.8 MB (   0.0% of SYSAUX )
+| Total size of SQL_MANAGEMENT_BASE            1.1 MB (   0.0% of SYSAUX )
+| Total size of AUTO_TASK                      0.6 MB (   0.0% of SYSAUX )
+| Total size of ORDIM                          0.4 MB (   0.0% of SYSAUX )
+| Total size of EM_MONITORING_USER             0.2 MB (   0.0% of SYSAUX )
+| Total size of LOGSTDBY                       0.1 MB (   0.0% of SYSAUX )
+| Total size of STREAMS                        0.1 MB (   0.0% of SYSAUX )
+| Total size of Others                MB (% of SYSAUX )
+|
+begin
+*
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at "SYS.UTLSYXSZ_UTIL", line 109
+ORA-06512: at line 2
+
+
+
+~~~~~~~~~~~~~~~~~~~~
+AWR Space Estimation
+~~~~~~~~~~~~~~~~~~~~
+
+| To estimate the size of the Automatic Workload Repository (AWR)
+| in SYSAUX, we need the following values:
+|
+|     - Interval Setting (minutes)
+|     - Retention Setting (days)
+|     - Number of Instances
+|     - Average Number of Active Sessions
+|     - Number of Datafiles
+
+|
+| For 'Interval Setting',
+|   Press <return> to use the current value:  minutes
+|   otherwise enter an alternative
+|
+Enter value for interval: 
+
+**   Value for 'Interval Setting':
+
+|
+| For 'Retention Setting',
+|   Press <return> to use the current value:  days
+|   otherwise enter an alternative
+|
+Enter value for retention: 
+
+**   Value for 'Retention Setting':
+
+|
+| For 'Number of Instances',
+|   Press <return> to use the current value:
+|   otherwise enter an alternative
+|
+Enter value for num_instances: 
+
+**   Value for 'Number of Instances':
+
+|
+| For 'Average Number of Active Sessions',
+|   Press <return> to use the current value:
+|   otherwise enter an alternative
+|
+Enter value for active_sessions: 
+
+**   Value for 'Average Number of Active Sessions':
+
+  select ( * 60), ( * 86400)
+           *
+ERROR at line 8:
+ORA-06550: line 8, column 12:
+PL/SQL: ORA-00936: missing expression
+ORA-06550: line 8, column 3:
+PL/SQL: SQL Statement ignored
+ORA-06550: line 12, column 23:
+PLS-00103: Encountered the symbol ";" when expecting one of the following:
+( - + case mod new not null <an identifier>
+<a double-quoted delimited-identifier> <a bind variable>
+continue avg count current exists max min prior sql stddev
+sum variance execute forall merge time timestamp interval
+date <a string literal with character set specification>
+<a number> <a single-quoted SQL string> pipe
+<an alternatively-quoted string literal with character set specification>
+
+

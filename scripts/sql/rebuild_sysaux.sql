@@ -1,0 +1,16 @@
+ALTER SESSION SET CONTAINER = CDB$ROOT;
+alter table WRI$_OPTSTAT_TAB_HISTORY  move tablespace SYSAUX;
+alter table WRI$_OPTSTAT_IND_HISTORY  move tablespace SYSAUX;
+alter table WRI$_OPTSTAT_AUX_HISTORY  move tablespace SYSAUX;
+alter table WRI$_OPTSTAT_OPR  move tablespace SYSAUX;
+alter table WRI$_OPTSTAT_OPR_TASKS  move tablespace SYSAUX;
+alter table OPT_FINDING$  move tablespace SYSAUX;
+alter table OPT_FINDING_OBJ$  move tablespace SYSAUX;
+alter table OPT_DIRECTIVE_OWN$	move tablespace SYSAUX;
+alter table OPT_DIRECTIVE$  move tablespace SYSAUX;
+alter table WRI$_OPTSTAT_SYNOPSIS_HEAD$  move tablespace SYSAUX;
+alter table WWV_FLOW_TEMPLATE_OPT_GROUPS  move tablespace SYSAUX;
+alter table WWV_FLOW_TEMPLATE_OPTIONS  move tablespace SYSAUX;
+alter table WWV_FLOW_MENU_OPTIONS  move tablespace SYSAUX;
+alter table WWV_FLOW_INSTALL_BUILD_OPT	move tablespace SYSAUX;
+exit;

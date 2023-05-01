@@ -1,0 +1,502 @@
+~~~~~~~~~~~~~~~
+AWR INFO Report
+~~~~~~~~~~~~~~~
+
+Report generated at                                                                                                          
+13:36:03 on Jan 01, 2022 ( Saturday ) in Timezone +01:00                                                                     
+                                                                                                                             
+
+
+########################################################
+(I) AWR Snapshots Information
+########################################################
+
+*****************************************************
+(1a) SYSAUX usage - Schema breakdown (dba_segments)
+*****************************************************
+|                                                                                                                            
+| Total SYSAUX size                      9,419.8 MB ( 29% of 32,768.0 MB MAX with AUTOEXTEND ON )                            
+|                                                                                                                            
+| Schema  SYS          occupies          7,794.7 MB (  82.7% )                                                               
+| Schema  APEX_210200  occupies          1,429.3 MB (  15.2% )                                                               
+| Schema  MDSYS        occupies             89.8 MB (   1.0% )                                                               
+| Schema  XDB          occupies             60.8 MB (   0.6% )                                                               
+| Schema  ORDDATA      occupies             16.3 MB (   0.2% )                                                               
+| Schema  AUDSYS       occupies              7.9 MB (   0.1% )                                                               
+| Schema  WMSYS        occupies              6.6 MB (   0.1% )                                                               
+| Schema  DVSYS        occupies              4.6 MB (   0.0% )                                                               
+| Schema  ORDS_METADAT occupies              3.9 MB (   0.0% )                                                               
+| Schema  CTXSYS       occupies              2.8 MB (   0.0% )                                                               
+| Schema  HR           occupies              1.6 MB (   0.0% )                                                               
+| Schema  GSMADMIN_INT occupies              0.9 MB (   0.0% )                                                               
+| Schema  ORDSYS       occupies              0.4 MB (   0.0% )                                                               
+| Schema  SYSTEM       occupies              0.3 MB (   0.0% )                                                               
+| Schema  DBSNMP       occupies              0.2 MB (   0.0% )                                                               
+|                                                                                                                            
+********************************************************                                                                     
+(1b) SYSAUX occupants space usage (v$sysaux_occupants)                                                                       
+********************************************************                                                                     
+|                                                                                                                            
+| Occupant Name        Schema Name               Space Usage                                                                 
+| -------------------- -------------------- ----------------                                                                 
+| JOB_SCHEDULER        SYS                        7,171.7 MB                                                                 
+| SM/OPTSTAT           SYS                          410.2 MB                                                                 
+| SM/OTHER             SYS                          102.1 MB                                                                 
+| SDO                  MDSYS                         89.8 MB                                                                 
+| XDB                  XDB                           60.8 MB                                                                 
+| AO                   SYS                           45.7 MB                                                                 
+| ORDIM/ORDDATA        ORDDATA                       16.3 MB                                                                 
+| SM/ADVISOR           SYS                           11.7 MB                                                                 
+| SMON_SCN_TIME        SYS                            8.5 MB                                                                 
+| PL/SCOPE             SYS                            8.1 MB                                                                 
+| AUDSYS               AUDSYS                         7.9 MB                                                                 
+| WM                   WMSYS                          6.6 MB                                                                 
+| TEXT                 CTXSYS                         2.8 MB                                                                 
+| SQL_MANAGEMENT_BASE  SYS                            1.1 MB                                                                 
+| AUTO_TASK            SYS                            0.6 MB                                                                 
+| SM/AWR               SYS                            0.4 MB                                                                 
+| ORDIM                ORDSYS                         0.4 MB                                                                 
+| EM_MONITORING_USER   DBSNMP                         0.2 MB                                                                 
+| LOGSTDBY             SYSTEM                         0.1 MB                                                                 
+| STREAMS              SYS                            0.1 MB                                                                 
+| AUDIT_TABLES         SYS                            0.0 MB                                                                 
+| EM                   SYSMAN                         0.0 MB                                                                 
+| EXPRESSION_FILTER    EXFSYS                         0.0 MB                                                                 
+| LOGMNR               SYSTEM                         0.0 MB                                                                 
+| ORDIM/ORDPLUGINS     ORDPLUGINS                     0.0 MB                                                                 
+| ORDIM/SI_INFORMTN_SC SI_INFORMTN_SCHEMA             0.0 MB                                                                 
+| STATSPACK            PERFSTAT                       0.0 MB                                                                 
+| TSM                  TSMSYS                         0.0 MB                                                                 
+| ULTRASEARCH          WKSYS                          0.0 MB                                                                 
+| ULTRASEARCH_DEMO_USE WK_TEST                        0.0 MB                                                                 
+| XSAMD                OLAPSYS                        0.0 MB                                                                 
+| XSOQHIST             SYS                            0.0 MB                                                                 
+|                                                                                                                            
+| Others (Unaccounted space)                      1,474.9 MB                                                                 
+|                                                                                                                            
+
+******************************************
+(1c) SYSAUX usage - Unregistered Schemas
+******************************************
+
+| This section displays schemas that are not registered                                                                      
+| in V$SYSAUX_OCCUPANTS                                                                                                      
+|                                                                                                                            
+| Schema  APEX_210200  occupies          1,429.3 MB                                                                          
+| Schema  DVSYS        occupies              4.6 MB                                                                          
+| Schema  ORDS_METADAT occupies              3.9 MB                                                                          
+| Schema  HR           occupies              1.6 MB                                                                          
+| Schema  GSMADMIN_INT occupies              0.9 MB                                                                          
+|                                                                                                                            
+| Total space                            1,440.2 MB                                                                          
+|                                                                                                                            
+                                                                                                                             
+*************************************************************
+(1d) SYSAUX usage - Unaccounted space in registered schemas
+*************************************************************
+|
+| This section displays unaccounted space in the registered
+| schemas of V$SYSAUX_OCCUPANTS.
+|                                                                                                                            
+| Unaccounted space in SYS/SYSTEM           34.8 MB                                                                          
+|                                                                                                                            
+| Total space                               34.8 MB                                                                          
+|                                                                                                                            
+begin
+*
+ERROR at line 1:
+ORA-01403: no data found 
+ORA-06512: at line 21 
+
+
+
+**********************************
+(3a) Space usage by AWR components (per database)
+**********************************
+
+COMPONENT        MB  % AWR  KB_PER_SNAP MB_PER_DAY MB_PER_WEEK TABLE% : INDEX%                                               
+--------- --------- ------ ------------ ---------- ----------- ----------------                                              
+FIXED           0.4  100.0                                        43% : 57%                                                  
+
+**********************************
+(3b) Space usage within AWR Components (> 500K)
+**********************************
+
+**********************************
+(4) Space usage by non-AWR components (> 500K)
+**********************************
+
+COMPONENT        MB SEGMENT_NAME                                                          SEGMENT_TYPE                       
+--------- --------- --------------------------------------------------------------------- ---------------                    
+NON_AWR     6,951.2 SYS.SYS_LOB0000008753C00003$$                                         LOBSEGMENT                         
+NON_AWR       681.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES2                                  TABLE                              
+NON_AWR       324.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES                                   TABLE                              
+NON_AWR       200.0 SYS.I_WRI$_OPTSTAT_H_OBJ#_ICOL#_ST                                    INDEX                              
+NON_AWR       119.0 SYS.SCHEDULER$_EVENT_LOG                                              TABLE                              
+NON_AWR       104.0 SYS.I_WRI$_OPTSTAT_H_ST                                               INDEX                              
+NON_AWR        88.2 SYS.SYS_LOB0000007360C00005$$                                         LOBSEGMENT                         
+NON_AWR        57.1 APEX_210200.SYS_LOB0001046495C00009$$                                 LOBSEGMENT                         
+NON_AWR        48.1 MDSYS.SYS_LOB0000067431C00006$$                                       LOBSEGMENT                         
+NON_AWR        42.0 SYS.SCHEDULER$_JOB_OUTPUT                                             TABLE                              
+NON_AWR        36.0 SYS.I_WRI$_OPTSTAT_HH_OBJ_ICOL_ST                                     INDEX                              
+NON_AWR        29.0 APEX_210200.WWV_FLOW_WEBSERVICE_LOG2$                                 TABLE                              
+NON_AWR        24.2 SYS.SYS_LOB0000069721C00004$$                                         LOBSEGMENT                         
+NON_AWR        23.0 SYS.SCHEDULER$_INSTANCE_PK                                            INDEX                              
+NON_AWR        18.0 SYS.SCHEDULER$_JOB_RUN_DETAILS                                        TABLE                              
+NON_AWR        17.0 SYS.I_SCHEDULER_JOB_RUN_DETAILS                                       INDEX                              
+NON_AWR        17.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES2_PK                               INDEX                              
+NON_AWR        16.2 MDSYS.SYS_LOB0000070635C00002$$                                       LOBSEGMENT                         
+NON_AWR        16.0 SYS.HEATMAP                                                           SYSTEM STATISTI                    
+                                                                                          CS                                 
+                                                                                                                             
+NON_AWR        15.0 SYS.I_WRI$_OPTSTAT_HH_ST                                              INDEX                              
+NON_AWR        14.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES2_IDX1                             INDEX                              
+NON_AWR        14.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES2_IDX3                             INDEX                              
+NON_AWR        14.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES2_IDX2                             INDEX                              
+NON_AWR        11.0 SYS.WRI$_OPTSTAT_OPR_TASKS                                            TABLE                              
+NON_AWR         9.0 MDSYS.SDO_CS_SRS                                                      TABLE                              
+NON_AWR         9.0 SYS.I_WRI$_OPTSTAT_OPR_TASKS_TGST                                     INDEX                              
+NON_AWR         8.0 APEX_210200.WWV_FLOW_PAGE_PLUGS                                       TABLE                              
+NON_AWR         8.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES_PK                                INDEX                              
+NON_AWR         8.0 SYS.SMON_SCN_TO_TIME_AUX                                              CLUSTER                            
+NON_AWR         7.2 SYS.SYS_LOB0000069706C00004$$                                         LOBSEGMENT                         
+NON_AWR         7.1 APEX_210200.SYS_LOB0001045221C00064$$                                 LOBSEGMENT                         
+NON_AWR         7.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES_IDX1                              INDEX                              
+NON_AWR         7.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES_IDX3                              INDEX                              
+NON_AWR         7.0 APEX_210200.WWV_FLOW_DEBUG_MESSAGES_IDX2                              INDEX                              
+NON_AWR         6.2 APEX_210200.SYS_LOB0001045292C00006$$                                 LOBSEGMENT                         
+NON_AWR         6.0 APEX_210200.WWV_FLOW_WEBSERVICE_LOG2$_IDX2                            INDEX                              
+NON_AWR         5.2 SYS.SYS_LOB0000007360C00004$$                                         LOBSEGMENT                         
+NON_AWR         5.0 APEX_210200.WWV_FLOW_STEP_ITEMS                                       TABLE                              
+NON_AWR         5.0 APEX_210200.WWV_FLOW_WEBSERVICE_LOG2$_IDX1                            INDEX                              
+NON_AWR         5.0 SYS.WRI$_OPTSTAT_HISTGRM_HISTORY.SYS_P8524                            TABLE PARTITION                    
+NON_AWR         4.2 SYS.SYS_LOB0000069701C00004$$                                         LOBSEGMENT                         
+NON_AWR         4.2 APEX_210200.SYS_LOB0001048114C00006$$                                 LOBSEGMENT                         
+NON_AWR         4.0 SYS.PLSCOPE_ACTION$                                                   TABLE                              
+NON_AWR         4.0 SYS.I_WRI$_OPTSTAT_OPR_TASKS_OPOBJ                                    INDEX                              
+NON_AWR         4.0 SYS.WRI$_OPTSTAT_HISTGRM_HISTORY.SYS_P8544                            TABLE PARTITION                    
+
+COMPONENT        MB SEGMENT_NAME                                                          SEGMENT_TYPE                       
+--------- --------- --------------------------------------------------------------------- ---------------                    
+NON_AWR         4.0 APEX_210200.WWV_QS_RANDOM_NAMES                                       TABLE                              
+NON_AWR         4.0 SYS.WRI$_OPTSTAT_IND_HISTORY                                          TABLE                              
+NON_AWR         3.2 SYS.SYS_LOB0000069711C00004$$                                         LOBSEGMENT                         
+NON_AWR         3.2 APEX_210200.SYS_LOB0001045820C00026$$                                 LOBSEGMENT                         
+NON_AWR         3.1 APEX_210200.SYS_LOB0001045884C00009$$                                 LOBSEGMENT                         
+NON_AWR         3.0 SYS.WRI$_ADV_OBJECTS                                                  TABLE                              
+NON_AWR         3.0 SYS.I_WRI$_OPTSTAT_IND_OBJ#_ST                                        INDEX                              
+NON_AWR         3.0 AUDSYS.AUD$UNIFIED.SYS_P281                                           TABLE PARTITION                    
+NON_AWR         3.0 APEX_210200.WWV_FLOW_BUILDER_AUDIT_TRAIL                              TABLE                              
+NON_AWR         3.0 APEX_210200.WWV_FLOW_STEP_PROCESSING                                  TABLE                              
+NON_AWR         3.0 APEX_210200.WWV_FLOW_MESSAGES$                                        TABLE                              
+NON_AWR         3.0 APEX_210200.WWV_FLOW_TEMPLATES                                        TABLE                              
+NON_AWR         2.2 SYS.SYS_LOB0000069716C00004$$                                         LOBSEGMENT                         
+NON_AWR         2.2 SYS.SYS_LOB0000069726C00004$$                                         LOBSEGMENT                         
+NON_AWR         2.0 SYS.WRI$_OPTSTAT_TAB_HISTORY                                          TABLE                              
+NON_AWR         2.0 APEX_210200.PDF_UNI_PK                                                INDEX                              
+NON_AWR         2.0 APEX_210200.WWV_FLOW_MESSAGES$_UQ                                     INDEX                              
+NON_AWR         2.0 SYS.I_WRI$_OPTSTAT_OPR_TASKS_STIME                                    INDEX                              
+NON_AWR         2.0 SYS.I_WRI$_OPTSTAT_OPR_TASKS_OPID                                     INDEX                              
+NON_AWR         2.0 SYS.I_WRI$_OPTSTAT_IND_ST                                             INDEX                              
+NON_AWR         2.0 SYS.I_WRI$_OPTSTAT_TAB_OBJ#_ST                                        INDEX                              
+NON_AWR         2.0 APEX_210200.WWV_FLOW_WEBSERVICE_LOG1$                                 TABLE                              
+NON_AWR         2.0 APEX_210200.WWV_FLOW_WORKSHEET_COLUMNS                                TABLE                              
+NON_AWR         2.0 APEX_210200.WWV_FLOW_REGION_REPORT_COLUMN                             TABLE                              
+NON_AWR         2.0 APEX_210200.WWV_FLOW_STEP_ITEM_HELP                                   TABLE                              
+NON_AWR         2.0 APEX_210200.WWV_FLOW_STEP_BUTTONS                                     TABLE                              
+NON_AWR         2.0 APEX_210200.WWV_FLOW_STEPS                                            TABLE                              
+NON_AWR         2.0 APEX_210200.WWV_FLOW_LIST_TEMPLATES                                   TABLE                              
+NON_AWR         2.0 MDSYS.EXT_TAB_REF_SYS_1                                               TABLE                              
+NON_AWR         2.0 MDSYS.SDO_COORD_REF_SYS                                               TABLE                              
+NON_AWR         2.0 XDB.XDB$ELEMENT                                                       TABLE                              
+NON_AWR         2.0 SYS.WRI$_OPTSTAT_OPR                                                  TABLE                              
+NON_AWR         2.0 SYS.EXP_HEAD$                                                         TABLE                              
+NON_AWR         1.2 XDB.SYS_LOB0000021380C00025$$                                         LOBSEGMENT                         
+NON_AWR         1.2 APEX_210200.SYS_LOB0001047913C00022$$                                 LOBSEGMENT                         
+NON_AWR         1.2 APEX_210200.SYS_LOB0001048095C00004$$                                 LOBSEGMENT                         
+NON_AWR         1.2 APEX_210200.SYS_LOB0001046473C00002$$                                 LOBSEGMENT                         
+NON_AWR         1.2 APEX_210200.SYS_LOB0001046013C00007$$                                 LOBSEGMENT                         
+NON_AWR         1.2 APEX_210200.SYS_LOB0001045798C00021$$                                 LOBSEGMENT                         
+NON_AWR         1.2 APEX_210200.SYS_LOB0001045531C00013$$                                 LOBSEGMENT                         
+NON_AWR         1.2 APEX_210200.SYS_LOB0001045410C00007$$                                 LOBSEGMENT                         
+NON_AWR         1.2 ORDS_METADATA.SYS_LOB0000246821C00007$$                               LOBSEGMENT                         
+NON_AWR         1.2 MDSYS.SYS_LOB0000070905C00003$$                                       LOBSEGMENT                         
+NON_AWR         1.2 MDSYS.SYS_LOB0000068205C00003$$                                       LOBSEGMENT                         
+NON_AWR         1.2 ORDDATA.SYS_LOB0000062362C00005$$                                     LOBSEGMENT                         
+NON_AWR         1.2 ORDDATA.SYS_LOB0000062179C00005$$                                     LOBSEGMENT                         
+NON_AWR         1.1 SYS.SYS_LOB0000008968C00008$$                                         LOBSEGMENT                         
+
+COMPONENT        MB SEGMENT_NAME                                                          SEGMENT_TYPE                       
+--------- --------- --------------------------------------------------------------------- ---------------                    
+NON_AWR         1.1 APEX_210200.SYS_LOB0001045798C00025$$                                 LOBSEGMENT                         
+NON_AWR         1.1 APEX_210200.SYS_LOB0001045798C00024$$                                 LOBSEGMENT                         
+NON_AWR         1.1 APEX_210200.SYS_LOB0001045640C00007$$                                 LOBSEGMENT                         
+NON_AWR         1.1 APEX_210200.SYS_LOB0001045555C00007$$                                 LOBSEGMENT                         
+NON_AWR         1.1 APEX_210200.SYS_LOB0001045213C00010$$                                 LOBSEGMENT                         
+NON_AWR         1.1 XDB.SYS_LOB0000021326C00023$$                                         LOBSEGMENT                         
+NON_AWR         1.1 SYS.SYS_LOB0000010339C00001$$                                         LOBSEGMENT                         
+NON_AWR         1.1 SYS.SYS_LOB0000008972C00005$$                                         LOBSEGMENT                         
+
+**********************************
+(5a) AWR snapshots - last 50
+**********************************
+
+**********************************
+(5b) AWR snapshots with errors or invalid
+**********************************
+
+no rows selected
+
+
+**********************************
+(5c) AWR snapshots -- OLDEST Non-Baselined snapshots
+**********************************
+
+**********************************
+(6) AWR Control Settings - interval, retention
+**********************************
+
+       DBID  LSNAPID LSPLITID LSNAPTIME      LPURGETIME      FLAG INTERVAL          RETENTION         VRSN                   
+----------- -------- -------- -------------- -------------- ----- ----------------- ----------------- ----                   
+ 4243515035        0        0 10/30 16:32:48 10/30 16:32:48     0 +40150 00:01:00.0 +00008 00:00:00.0   20                   
+
+**********************************
+(7a) AWR Contents - row counts for each snapshots
+**********************************
+
+**********************************
+(7b) AWR Contents - average row counts per snapshot
+**********************************
+
+**********************************
+(7c) AWR total item counts - names, text, plans
+**********************************
+
+   SQLTEXT    SQLPLAN   SQLBMETA     SEGOBJ   DATAFILE   TEMPFILE                                                            
+---------- ---------- ---------- ---------- ---------- ----------                                                            
+         0          0          0          0          0          0                                                            
+
+
+########################################################
+(II) Advisor Framework Info
+########################################################
+
+**********************************
+(1) Advisor Tasks - Last 50
+**********************************
+
+OWNER/ADVISOR  TASK_ID/NAME                     CREATED          EXE_DURATN EXE_CREATN HOW_C STATUS                          
+-------------- -------------------------------- ---------------- ---------- ---------- ----- ------------                    
+SYS/SPM Evolve 2/SYS_AUTO_SPM_EVOLVE_TASK       08:12:05 (10/18)          1 ########## AUTO  COMPLETED                       
+SYS/Statistics 4/INDIVIDUAL_STATS_ADVISOR_TASK  08:12:08 (10/18)                       CMD   INITIAL                         
+SYS/Statistics 3/AUTO_STATS_ADVISOR_TASK        08:12:08 (10/18)          6 ########## CMD   COMPLETED                       
+SYS/Segment Ad 759/SYS_AUTO_SPCADV8011409271120 09:14:01 (11/27)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 760/SYS_AUTO_SPCADV2095409271120 09:54:09 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 761/SYS_AUTO_SPCADV7194410271120 10:44:19 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 762/SYS_AUTO_SPCADV0251411271120 11:14:25 (11/27)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 763/SYS_AUTO_SPCADV5380412271120 12:04:38 (11/27)          0          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 764/SYS_AUTO_SPCADV1510413271120 13:04:51 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 765/SYS_AUTO_SPCADV6015513271120 13:55:02 (11/27)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 766/SYS_AUTO_SPCADV0093514271120 14:35:09 (11/27)          0          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 767/SYS_AUTO_SPCADV4181515271120 15:15:18 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 768/SYS_AUTO_SPCADV9290516271120 16:05:29 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 769/SYS_AUTO_SPCADV3384516271120 16:45:38 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 770/SYS_AUTO_SPCADV9514517271120 17:45:51 (11/27)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 771/SYS_AUTO_SPCADV4013618271120 18:36:01 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 772/SYS_AUTO_SPCADV8101619271120 19:16:10 (11/27)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 773/SYS_AUTO_SPCADV5252620271120 20:26:25 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 774/SYS_AUTO_SPCADV0361621271120 21:16:36 (11/27)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 775/SYS_AUTO_SPCADV4445621271120 21:56:44 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 776/SYS_AUTO_SPCADV8533622271120 22:36:53 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 777/SYS_AUTO_SPCADV3042723271120 23:27:04 (11/27)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 778/SYS_AUTO_SPCADV7130700281120 00:07:13 (11/28)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 779/SYS_AUTO_SPCADV3260701281120 01:07:26 (11/28)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 780/SYS_AUTO_SPCADV8365701281120 01:57:36 (11/28)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 781/SYS_AUTO_SPCADV1432702281120 02:27:43 (11/28)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 782/SYS_AUTO_SPCADV3040007281120 07:00:04 (11/28)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 783/SYS_AUTO_SPCADV4531808281120 08:18:53 (11/28)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 784/SYS_AUTO_SPCADV5562808281120 08:28:56 (11/28)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 785/SYS_AUTO_SPCADV9040909281120 09:09:04 (11/28)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 786/SYS_AUTO_SPCADV3134909281120 09:49:13 (11/28)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 787/SYS_AUTO_SPCADV8233910281120 10:39:23 (11/28)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 788/SYS_AUTO_SPCADV2311911281120 11:19:31 (11/28)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 789/SYS_AUTO_SPCADV7460912281120 12:09:46 (11/28)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 790/SYS_AUTO_SPCADV2565912281120 12:59:56 (11/28)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 791/SYS_AUTO_SPCADV9131119281120 19:11:13 (11/28)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 801/SYS_AUTO_SPCADV4270201291120 01:02:27 (11/29)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 802/SYS_AUTO_SPCADV5291201291120 01:12:29 (11/29)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 803/SYS_AUTO_SPCADV7333201291120 01:32:33 (11/29)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 804/SYS_AUTO_SPCADV8354201291120 01:42:35 (11/29)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 805/SYS_AUTO_SPCADV9375201291120 01:52:37 (11/29)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 806/SYS_AUTO_SPCADV0390202291120 02:02:39 (11/29)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 807/SYS_AUTO_SPCADV1421202291120 02:12:42 (11/29)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 808/SYS_AUTO_SPCADV2442202291120 02:22:44 (11/29)          0          0 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 809/SYS_AUTO_SPCADV3463202291120 02:32:46 (11/29)          1          1 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 811/SYS_AUTO_SPCADV5040023291120 23:00:04 (11/29)          2          2 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 821/SYS_AUTO_SPCADV1060023081220 23:00:06 (12/08)          7          7 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 831/SYS_AUTO_SPCADV9110023161220 23:00:11 (12/16)         29         29 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 841/SYS_AUTO_SPCADV6040023171220 23:00:04 (12/17)          2          2 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+SYS/Segment Ad 851/SYS_AUTO_SPCADV3040023221220 23:00:04 (12/22)          3          3 CMD   COMPLETED                       
+               21                                                                                                            
+                                                                                                                             
+
+**********************************
+(2) Advisor Task - Oldest 5
+**********************************
+
+OWNER/ADVISOR  TASK_ID/NAME                     CREATED          EXE_DURATN EXE_CREATN HOW_C STATUS                          
+-------------- -------------------------------- ---------------- ---------- ---------- ----- ------------                    
+SYS/Segment Ad 11/SYS_AUTO_SPCADV50006002101202 00:06:00 (01/21)          2          3 CMD   COMPLETED                       
+               1                                                                                                             
+                                                                                                                             
+SYS/Segment Ad 21/SYS_AUTO_SPCADV80400232201202 23:00:04 (01/22)          1          1 CMD   COMPLETED                       
+               1                                                                                                             
+                                                                                                                             
+SYS/Segment Ad 31/SYS_AUTO_SPCADV50400072301202 07:00:04 (01/23)          2          2 CMD   COMPLETED                       
+               1                                                                                                             
+                                                                                                                             
+SYS/Segment Ad 32/SYS_AUTO_SPCADV00057082301202 08:57:00 (01/23)          1          1 CMD   COMPLETED                       
+               1                                                                                                             
+                                                                                                                             
+SYS/Segment Ad 33/SYS_AUTO_SPCADV81617102301202 10:17:16 (01/23)          1          1 CMD   COMPLETED                       
+               1                                                                                                             
+                                                                                                                             
+
+**********************************
+(3) Advisor Tasks With Errors - Last 50
+**********************************
+
+OWNER/ADVISOR  TASK_ID/NAME                     CREATED          EXE_DURATN EXE_CREATN HOW_C STATUS                          
+-------------- -------------------------------- ---------------- ---------- ---------- ----- ------------                    
+TASK_DESC                                                                                                                    
+--------------------------------------------------------------------------------------------------------------               
+ERROR_MSG                                                                                                                    
+--------------------------------------------------------------------------------------------------------------               
+SYS/Statistics 4/INDIVIDUAL_STATS_ADVISOR_TASK  08:12:08 (10/18)                       CMD   INITIAL                         
+Description:                                                                                                                 
+Error Msg  :                                                                                                                 
+                                                                                                                             
+
+
+
+########################################################
+(III) ASH Usage Info
+########################################################
+
+**********************************
+(1a) ASH histogram (past 3 days)
+**********************************
+
+**********************************
+(1b) ASH histogram (past 1 day)
+**********************************
+
+**********************************
+(2a) ASH details (past 3 days)
+**********************************
+
+**********************************
+(2b) ASH details (past 1 day)
+**********************************
+
+**********************************
+(2c) ASH sessions (Fg Vs Bg) (past 1 day across all instances in RAC)
+**********************************
+
+Foreground %                                                                                                                 
+Background %                                                                                                                 
+MMNL %                                                                                                                       
+                                                                                                                             
+End of Report

@@ -1,0 +1,8 @@
+run {
+    allocate channel "dsk1" device type disk;
+    backup as compressed backupset archivelog all;
+    backup incremental level 1 as compressed backupset database;
+    delete noprompt obsolete recovery window of 7 days;
+    delete noprompt archivelog until time 'sysdate-1' backed up 1 times to device type disk;
+}
+

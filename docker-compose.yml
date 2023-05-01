@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+   xe_21c:
+     image: gvenzl/oracle-xe:21-full
+     container_name: oracle_xe_21c
+     volumes:
+       - oracle-volume:/opt/oracle/oradata
+       - .:/shared
+     ports:
+       - "1521:1521"
+     restart: always
+     environment:
+       ORACLE_PASSWORD: SysPassword1
+
+volumes:
+    oracle-volume:
+
